@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# Simple Interest Calculator
+# This script calculates simple interest
 
-echo "Enter Principal:"
+echo "Enter the principal:"
 read principal
 
-echo "Enter Rate of Interest:"
+echo "Enter the rate of interest:"
 read rate
 
-echo "Enter Time Period:"
+echo "Enter the time period:"
 read time
 
 simple_interest=$((principal * rate * time / 100))
