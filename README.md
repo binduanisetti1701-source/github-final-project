@@ -1,42 +1,50 @@
-# Simple Interest Calculator
+OpenShift CI/CD Final Project
 
-## Description
-This project contains a Bash script that calculates Simple Interest based on user input.  
-The user is prompted to enter the principal amount, rate of interest, and time period.
+Project Name
 
-## Simple Interest Formula
+OpenShift CI/CD Pipeline
 
-Simple Interest (SI) is calculated using the formula:
+Description
 
-SI = (Principal × Rate × Time) / 100
+This project demonstrates a complete Continuous Integration and Continuous Deployment pipeline using GitHub Actions, Tekton, and OpenShift.
 
-Where:
-- Principal is the initial amount of money
-- Rate is the rate of interest per year
-- Time is the time period in years
+The pipeline automates source code validation, linting, unit testing, container image building, and application deployment.
 
-## How the Script Works
+Technologies Used
 
-1. The script asks the user to enter:
-   - Principal amount
-   - Rate of interest
-   - Time period
-2. It applies the simple interest formula.
-3. It displays the calculated simple interest.
+- Python
+- Django
+- GitHub
+- GitHub Actions
+- Flake8
+- Nose
+- Tekton
+- OpenShift
+- Buildah
 
-## How to Run the Script
+CI/CD Pipeline
 
-Run the following command in the terminal:
+The CI/CD pipeline consists of the following stages:
 
-bash simple-interest.sh
+1. Cleanup
+2. Git clone
+3. Flake8 linting
+4. Nose unit testing
+5. Buildah container image build
+6. OpenShift client deployment
 
-Then enter the required values when prompted.
+GitHub Actions
 
-## Example
+GitHub Actions is used to automatically run the linting and unit testing stages when changes are pushed to the repository.
 
-If:
-- Principal = 1000
-- Rate = 5
-- Time = 2
+Tekton
 
-Simple Interest = (1000 × 5 × 2) / 100 = 100
+Tekton is used to create reusable CI/CD tasks for cleanup, source code cloning, linting, testing, building, and deployment.
+
+OpenShift
+
+OpenShift is used to run the Tekton pipeline and deploy the application.
+
+Objective
+
+The objective of this project is to demonstrate a complete automated CI/CD workflow from source code validation through application deployment on OpenShift.
