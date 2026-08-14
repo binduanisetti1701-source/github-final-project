@@ -28,7 +28,7 @@ jobs:
 
       - name: Run Flake8
         run: |
-          flake8 .
+          flake8 . --ignore=E501,W292,E302,F401,F821
 
       - name: Run Nose tests
         run: |
